@@ -1,0 +1,13 @@
+//template
+<h2>Today's articale</h2>
+<hr>
+<div *ngFor="let article of articles">
+  <a href="{{article.url}}" target="_blank">{{article.title}}</a>
+  <app-likes></app-likes>
+</div>
+
+<textarea id="article-title" cols="70"></textarea>
+<textarea id="article-url" cols="70"></textarea>
+<button (click)="addArticle()">Add</button>
+
+<router-outlet></router-outlet>
